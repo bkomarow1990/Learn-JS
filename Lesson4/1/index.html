@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events with Forms</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-sm-2" type="text" placeholder="Search" id="searchInput">
+              <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="searchBtn">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <main class="container">
+        <form>
+            <fieldset>
+                <legend>Product</legend>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="nameInput" class="form-label mt-4">Product Name</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="Enter name">
+                        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="priceInput" class="form-label mt-4">Product Price</label>
+                        <input min="100" max="10000" type="number" class="form-control" id="priceInput" placeholder="Enter price">
+                        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="colorInput" class="form-label mt-4">Product Color</label>
+                        <input type="text" class="form-control" id="colorInput" placeholder="Enter color">
+                        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="countInput" class="form-label mt-4">Product Count</label>
+                        <input min="100" max="10000" type="number" class="form-control" id="countInput" placeholder="Enter count">
+                        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div>
+                        <button id="saveBtn" type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <div class="container">
+           <ul id="product-list">
+                <li>
+                    <div class="row">
+                        <div class="col">Name </div>
+                        <div class="col">Price </div>
+                        <div class="col">Color </div>
+
+                    </div>
+                </li>
+           </ul>
+        </div>
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+</html>
