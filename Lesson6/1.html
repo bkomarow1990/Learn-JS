@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .search_login{
+            display: flex;
+            
+            align-items: center;
+            justify-content: space-between; 
+        }
+        .search_login input{
+            height: 25px;
+        }
+        .user{
+            margin-top: 50px;
+            display: flex;
+        }
+        .user img{
+            width: 200px;
+            height: 200px;
+        }
+        .search_login input:first-child{
+            flex:2;
+        }
+        .search_login input:nth-child(2n){
+            flex:1;
+        }
+        main{
+            padding: 20px;
+            border: 2px solid grey;
+        }
+        .col-1{
+            display: flex;
+            flex-direction: column;
+        }
+        .user > div{
+            flex:1;
+        }
+        .col-1_info{
+            display: flex;
+            flex-direction: column;
+        }
+        .col-1_info > div{
+            display: flex;
+            justify-items: center;
+        }
+        /* .col-1_info p{
+            align-self: flex-start;
+        }*/
+        .col-1_info span{
+            margin-left: 5px;
+            align-self: center;
+        } 
+        .col-1{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        
+        <div class="search_login">
+            <input type="text" placeholder="Search" id="search">
+            <input type="button" value="Find" id="find">
+        </div>
+
+
+        <div class="user">
+            <div class="col-1">
+                <img src="" alt="" id="user_img">
+                <div class="col-1_info">
+                <div>
+                    <p>Name: </p>
+                    <span id="name"></span>
+                </div>
+                <div>
+                    <p>Login: </p>
+                    <span id="login"></span>
+                </div>
+                </div>
+                <hr>
+            </div>
+
+            
+        </div>
+    </main>
+    <script src="1.js"></script>
+</body>
+</html>
