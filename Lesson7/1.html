@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2{
+            text-align: center;
+        }
+        #peoples_ul{
+            list-style: none;
+            flex-wrap: wrap ;
+            padding: 100px;
+            display: flex;
+            justify-content: center;
+            row-gap: 20px;
+
+        }
+        #peoples_ul > li > h3{
+            padding: 5px;
+            color:white;
+            background-color: rgb(247, 117, 117);
+        }
+        #peoples_ul li{
+            margin-right: 20px;
+            padding: 10px;
+            width: 20%;
+            border-radius: 10%;
+            border: 1px solid black;
+        }
+        .nav{
+            display: flex;
+           justify-content: center;
+        }
+        .nav input{
+            margin-right: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Peoples</h2>
+        <ul id="peoples_ul">
+
+        </ul>
+    </main>
+    <div class="nav">
+        <input type="button" value="PREV" id="prev">
+        <input type="button" value="NEXT" id="next">
+    </div>
+    <script src="1.js"></script>
+</body>
+</html>

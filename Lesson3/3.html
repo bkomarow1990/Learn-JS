@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body, html{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(228, 228, 228);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            background-color: rgb(71, 71, 255) ;
+            padding: 20px ;
+            display: flex;
+            justify-content: space-between;
+            justify-items: center;
+            color: white;
+            margin: 0 ;
+        }
+        header h1{
+            margin-left: 50px;
+        }
+        header p{
+            margin-right: 50px;
+            align-self: center;
+            color: lightcyan;
+        }
+        main{
+            padding-top: 50px;
+            width: 90%;
+            margin: auto;
+
+        }
+        .filters .filter_radio_buttons{
+            border: 0;
+        }
+        .search_fields{
+            margin-top: 20px;
+            justify-content: flex-start;
+            align-items: center;
+            
+            display: flex;
+            
+        }
+        .search_fields > input, select{
+            margin-right: 10px;
+            padding: 5px 10px;
+        }
+         /* .filters input{
+         
+           
+        } */
+        .btn{
+            color: white;
+            background-color: rgb(71, 71, 255);
+            border: 0;
+            padding: 10px 50px !important;
+            border-radius: 8px;
+        }
+       .main{
+           margin-top: 25px;
+           display: flex;
+           flex-direction: row;
+       }
+       .main .filter{
+           display: flex;
+           flex-direction: column;
+       }
+       .main .filter h2{
+           margin-bottom: 20px;
+       }
+       .main .filter, .races{
+           border-radius: 8px;
+           border: 1px solid rgb(177, 177, 177);
+           background-color: white;
+           padding:50px
+       }
+       .main .filter > div{
+           display: flex;
+           flex-direction: column;
+       }
+       .main .filter span{
+           font-weight: bold;
+           color: rgb(41, 41, 202);
+           margin-bottom: 10px;
+       }
+       .main .filter input{
+
+       }
+       .stops{
+           margin-bottom: 20px;
+       }
+       .stops > div{
+           display: flex;
+       }
+       .stops > div> input{
+           margin-right: 5px;
+       }
+       .price_filter{
+           display: flex;
+           align-items: center;
+           margin-bottom: 20px;
+       }
+       .price_filter input{
+           width: 80px;
+           height: 2em;
+       }
+       .price_filter > p{
+           margin: 0 5px;
+       }
+       .min-max{
+           display: flex;
+           justify-content: flex-start;
+       }
+       .min-max h4{
+           margin-right: 35%;
+       }
+       #airlines_first{
+           margin-top: 10px;
+       }
+       .races{
+           margin-left: 20px;
+           flex-basis: 80%;
+       }
+    </style>
+</head>
+<body>
+    <header>
+            <h1>Flights - Search List</h1>
+            <p>Home / Flights Search List</p>
+    </header>
+    <main>
+
+        <div class="filters">
+                <div class="filter_radio_buttons">
+                    <input type="radio" name="ways" id="oneWay">
+                    <label for="oneWay">One Way</label>
+                    <input type="radio" name="ways" id="roundTrip">
+                    <label for="roundTrip">Round Trip</label>
+                </div>
+                <div class="search_fields">
+                    <input type="text" name="" id="" placeholder="From">
+                    <input type="text" name="" id="" placeholder="To">
+                    <input type="date" name="" id="" placeholder="Depart Date">
+                    <input type="date" name="" id="" placeholder="Return Date">
+                    <select name="" id="select_class" >
+                        <option value="Econom">Economy Class</option>
+                        <option value="Average">Average Class</option>
+                        <option value="Lux">Lux Class</option>
+                    </select>
+                    <input type="button" name="" id="search_btn" class="btn" value="Search">
+                </div>
+        </div>
+        <div class="main">
+            <div class="filter">
+                <h2>Filter</h2>
+                <div class="stops">
+                    <span>No. of Stops</span>
+                    <div>
+                        <input type="checkbox" name="" id="non_stop" value="Non Stop">
+                        <label for="non_stop">Non Stop</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="1_stop" value="1 Stop">
+                        <label for="1_stop">1 Stop</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="2+_stops" value="2+ Stops">
+                        <label for="2+_stops">2+ Stops</label>
+                    </div>
+                </div>
+                <div>
+                    <span>Price</span>
+                    <div class="min-max">
+                        <h4>Min:</h4>
+                        <h4>Max:</h4>
+                    </div>
+                    <div class="price_filter">
+                        <input type="number" name="" id="" value="0">
+                        <p>$ - </p>
+                        <input type="number" name="" id="" value="1000">
+                        <p>$</p>
+                    </div>
+                    <div class="airlines">
+                        <span>Airlines</span>
+                        <div id="airlines_first">
+                            <input type="checkbox" name="" id="c1">
+                            <label for="c1">Lorem, ipsum dolor.</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="c2">
+                            <label for="c2">Lorem, ipsum dolor.</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="c3">
+                            <label for="c3">Lorem, ipsum dolor.</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="c4">
+                            <label for="c4">Lorem, ipsum dolor.</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="c5">
+                            <label for="c5">Lorem, ipsum dolor.</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="c6">
+                            <label for="c6">Lorem, ipsum dolor.</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="c7">
+                            <label for="c7">Lorem, ipsum dolor.</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="c8">
+                            <label for="c8">Lorem, ipsum dolor.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="races">
+                <div>
+                    <h2>Dehli to Sydney</h2>
+                </div>
+                <div class="grid">
+                    <div>
+                        <span>Airlines</span>
+                        <span>Departure</span>
+                        <span>Duration</span>
+                        <span>Arrival</span>
+                        <span>Price</span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

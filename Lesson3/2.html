@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding-top: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(images/beach-2.jpg);
+            background-size: cover;
+        }
+
+        main {
+            padding: 20px 30px;
+            color: white;
+            width: 80%;
+            margin: auto;
+            -webkit-box-shadow: 0px 0px 20px 11px rgba(0, 0, 0, 0.966);
+            -moz-box-shadow: 0px 0px 20px 11px rgba(0, 0, 0, 0.966);
+            box-shadow: 0px 0px 20px 11px rgba(0, 0, 0, 0.966);
+        }
+
+        .form {
+            margin-top: 20px;
+        }
+
+        .form>div {
+            margin-top: 20px;
+            display: grid;
+            grid-column-gap: 10px;
+        }
+
+        .form>div>* {
+            padding: 5px;
+
+        }
+
+        .form>div>span {
+            vertical-align: middle;
+        }
+
+        .grid_1 {
+            grid-template-columns: 1fr 2fr 2fr;
+        }
+
+        .grid_2 {
+            grid-template-columns: 1fr 4fr;
+        }
+
+        .grid_3 {
+            grid-template-columns: 1fr 1fr 1fr 2fr;
+        }
+
+        .grid_4 {
+            grid-template-columns: 1fr 4fr;
+        }
+
+        .grid_5 {
+            grid-template-columns: 1fr 4fr;
+        }
+
+        .submit {
+            grid-template-columns: 1fr 4fr;
+        }
+        .submit_btn{
+            color: white;
+            background: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="info">
+            <h2>Contact form</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, beatae?</p>
+        </div>
+        <div class="form">
+            <div class="grid_1">
+                <span>Your name: </span>
+                <input type="text" name="" id="" placeholder="Enter name">
+                <input type="text" name="" id="" placeholder="Enter surname">
+            </div>
+            <div class="grid_2">
+                <span>Your email</span>
+                <input type="email" name="" id="" placeholder="Enter Email">
+            </div>
+            <div class="grid_3">
+                <span>Phone*: </span>
+                <input type="number" placeholder="000" min="3" max="3">
+                <input type="number" placeholder="000" min="3" max="3">
+                <input type="number" placeholder="000" min="3" max="3">
+            </div>
+            <div class="grid_4">
+                <span>Message subject*: </span>
+                <select name="" id="">
+                    <option value="1">Other</option>
+                    <option value="2">C#</option>
+                    <option value="3">C++</option>
+                    <option value="4">JavaScript</option>
+                    <option value="5">Java</option>
+                    <option value="6">HTML5/CSS3</option>
+                </select>
+            </div>
+            <div class="grid_5">
+                <span>Message*: </span>
+                <textarea name="" id="" cols="1" rows="10"></textarea>
+            </div>
+            <hr>
+            <div class="submit">
+                <div></div>
+                <input type="submit" value="Submit form" class="submit_btn">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

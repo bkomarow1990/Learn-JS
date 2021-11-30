@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(238, 84, 84);
+        }
+        main{
+            padding-top: 30px;
+        }
+        .login {
+            text-align: center;
+            width: 60%;
+            margin: auto;
+            display: flex;
+            padding: 30px;
+            margin-bottom: 30px;
+            flex-direction: column;
+            background-color: rgb(209, 209, 209);
+            -webkit-box-shadow: 0px 0px 21px 11px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 0px 0px 21px 11px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 0px 21px 11px rgba(34, 60, 80, 0.2);
+        }
+        h2{
+            font-size: 2em;
+            font-weight: 750;
+        }
+        .txtBox, .pswdBox{
+            /* width: 80%;
+            margin: auto; */
+            flex-grow: 10px;
+            
+            border: none;
+            text-align: center;
+            padding: 20px;
+            color: rgb(189, 189, 189);
+            font-weight: bold;
+            font-size: 1.3em;
+            /* -webkit-box-shadow: 0px 0px 31px 11px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 0px 0px 31px 11px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 0px 31px 11px rgba(34, 60, 80, 0.2); */
+            margin-top: 20px;
+        }
+        .btn{
+            background-color: rgb(79, 198, 79) ;
+            color: white;
+            font-size: 1.3em;
+            padding: 20px;
+            margin-top: 30px;
+            border: none;
+            border-bottom: 5px solid green;
+        }
+        .login a{
+            margin-top: 30px;
+            text-decoration: none;
+            color: rgb(218, 103, 103);
+            font-weight: bold;
+        }
+        .or_login_with{
+            font-size: 1.3em;
+            color: white;
+            
+        }
+        .login_with_div{
+            text-align: center;
+        }
+        .social_networks{
+            display: flex;
+            margin-top: 30px;
+            justify-content: center;
+            color: white;
+        }
+        .social_networks > div > input[type = "button"]{
+            padding: 20px 40px;
+            font-size: 1.3em;
+
+            border: none;
+            background: none;
+            color: white;
+        }
+        .social_networks > div{
+        
+            margin-right: 20px;
+        }
+        .social_networks > div > img{
+            padding-left: 20px;
+        }
+        
+        .facebook{
+
+            background-color: rgb(80, 80, 208);
+            
+        }
+        .twitter{
+            color: white;
+            background-color: rgb(0, 198, 243);
+        }
+        /* input */
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="login">
+            <h2>Member login</h2>
+            <input type="text" class="txtBox" placeholder="Username">
+            <input type="password" class="pswdBox" placeholder="Password">
+            <input type="submit" value="Login" class="btn">
+            <a href="#">Forgot Password?</a>
+        </div>
+        <div class="login_with_div"><span class="or_login_with">... or login with:</span></div>
+        
+        <div class="social_networks">
+            <div class="facebook">
+                <img src="images/icons/facebook.svg" alt="">
+                <input type="button" value="Facebook" class="facebook_btn">
+            </div>
+            
+            <div class="twitter">
+                <img src="images/icons/twitter.svg" alt="">
+                <input type="button" value="Twitter" class="twitter_btn">
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
