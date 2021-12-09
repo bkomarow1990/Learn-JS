@@ -18,7 +18,7 @@ const searchBtn = document.getElementById("searchBtn");
 
 const searchTxt = document.getElementById("searchInput");
 
-
+const list = document.getElementById("product-list");
 
 let products = [];
 let tmp = [];
@@ -60,8 +60,9 @@ saveBtn.addEventListener("click", (event) => {
 
 searchBtn.addEventListener("click", (event) =>{
     event.preventDefault();
-    tmp = products;
+    tmp = products.slice();
     products = [];
+    list.innerHTML = "";
     tmp.forEach(element => {
         if(element.name == searchTxt.value){
             products.push(element);
@@ -74,7 +75,7 @@ searchBtn.addEventListener("click", (event) =>{
 
 function renderProduct(prod) {
 
-    const list = document.getElementById("product-list");
+
 
     const li = document.createElement("li");
 

@@ -6,8 +6,8 @@ const xhr = new XMLHttpRequest();
 
 const user_img = document.getElementById("user_img"); 
 
-const name = document.getElementById("name"); 
 const url_github = document.getElementById("url_github"); 
+const name = document.getElementById("name"); 
 
 
 find.addEventListener("click", (event) =>{
@@ -18,6 +18,7 @@ find.addEventListener("click", (event) =>{
     xhr.send();
     xhr.onload = () => {
         let result = JSON.parse(xhr.responseText);
+        console.log(result);
         user_img.src = result.avatar_url;
         name.innerHTML = result.name;
         url_github.innerHTML = result.html_url;

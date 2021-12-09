@@ -1,163 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             box-sizing: border-box;
         }
-        body, html{
+
+        body,
+        html {
+            overflow-x: hidden;
             margin: 0;
             padding: 0;
             background-color: rgb(228, 228, 228);
             font-family: Arial, Helvetica, sans-serif;
         }
-        header{
-            background-color: rgb(71, 71, 255) ;
-            padding: 20px ;
+
+        header {
+            background-color: rgb(71, 71, 255);
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             justify-items: center;
             color: white;
-            margin: 0 ;
+
+            margin: 0;
         }
-        header h1{
+
+        header h1 {
             margin-left: 50px;
         }
-        header p{
+
+        header p {
             margin-right: 50px;
             align-self: center;
             color: lightcyan;
         }
-        main{
+
+        main {
             padding-top: 50px;
             width: 90%;
             margin: auto;
-
+            padding-bottom: 50px;
         }
-        .filters .filter_radio_buttons{
+
+        .filters .filter_radio_buttons {
             border: 0;
         }
-        .search_fields{
+
+        .search_fields {
             margin-top: 20px;
+            display: flex;
             justify-content: flex-start;
             align-items: center;
-            
-            display: flex;
-            
+            gap: 5px;
+            /* margin-right: 10px; */
+            padding: 5px 0;
         }
-        .search_fields > input, select{
-            margin-right: 10px;
-            padding: 5px 10px;
+
+        .search_fields>input,
+        select {
+            height: 40px;
+            flex-grow: 1;
+            padding-left: 20px;
+            border-radius: 5px;
+            border: 1px solid rgb(202, 202, 202);
         }
-         /* .filters input{
+
+        /* .filters input{
          
            
         } */
-        .btn{
+        .btn {
             color: white;
             background-color: rgb(71, 71, 255);
             border: 0;
             padding: 10px 50px !important;
             border-radius: 8px;
         }
-       .main{
-           margin-top: 25px;
-           display: flex;
-           flex-direction: row;
-       }
-       .main .filter{
-           display: flex;
-           flex-direction: column;
-       }
-       .main .filter h2{
-           margin-bottom: 20px;
-       }
-       .main .filter, .races{
-           border-radius: 8px;
-           border: 1px solid rgb(177, 177, 177);
-           background-color: white;
-           padding:50px
-       }
-       .main .filter > div{
-           display: flex;
-           flex-direction: column;
-       }
-       .main .filter span{
-           font-weight: bold;
-           color: rgb(41, 41, 202);
-           margin-bottom: 10px;
-       }
-       .main .filter input{
 
-       }
-       .stops{
-           margin-bottom: 20px;
-       }
-       .stops > div{
-           display: flex;
-       }
-       .stops > div> input{
-           margin-right: 5px;
-       }
-       .price_filter{
-           display: flex;
-           align-items: center;
-           margin-bottom: 20px;
-       }
-       .price_filter input{
-           width: 80px;
-           height: 2em;
-       }
-       .price_filter > p{
-           margin: 0 5px;
-       }
-       .min-max{
-           display: flex;
-           justify-content: flex-start;
-       }
-       .min-max h4{
-           margin-right: 35%;
-       }
-       #airlines_first{
-           margin-top: 10px;
-       }
-       .races{
-           margin-left: 20px;
-           flex-basis: 80%;
-       }
+        .main {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .main .filter {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main .filter h2 {
+            margin-bottom: 20px;
+        }
+
+        .main .filter,
+        .races {
+            border-radius: 8px;
+            border: 1px solid rgb(177, 177, 177);
+            background-color: white;
+            padding: 50px
+        }
+
+        .main .filter>div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main .filter span {
+            font-weight: bold;
+            color: rgb(41, 41, 202);
+            margin-bottom: 10px;
+        }
+
+        .main .filter input {}
+
+        .stops {
+            margin-bottom: 20px;
+        }
+
+        .stops>div {
+            display: flex;
+        }
+
+        .stops>div>input {
+            margin-right: 5px;
+        }
+
+        .price_filter {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .price_filter input {
+            width: 80px;
+            height: 2em;
+        }
+
+        .price_filter>p {
+            margin: 0 5px;
+        }
+
+        .min-max {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .min-max h4 {
+            margin-right: 35%;
+        }
+
+        #airlines_first {
+            margin-top: 10px;
+        }
+
+        .races {
+            margin-left: 20px;
+            flex-basis: 80%;
+            padding: 0;
+        }
+
+        .location {
+            background: url("images/place.png") no-repeat 95%/25px;
+            background-color: white;
+        }
+
+        .dehli {
+            display: flex;
+            padding: 40px;
+            justify-content: center;
+            border-bottom: 1px solid rgb(208, 208, 208);
+        }
+
+        .grid {
+            /* display: grid;
+            column-gap: 30px;
+            row-gap: 20px;
+            justify-items: center;
+            row-gap: 10px;
+            vertical-align: middle;
+            grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr; */
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(1fr, 6);
+            justify-items: center;
+            align-items: center;
+            font-size: 1.3em;
+            padding: 20px;
+            border-bottom: 1px solid rgb(208, 208, 208);
+        }
+        
+        .grid> div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:5px;
+            border: 1ps solid black;
+            padding: 10px;
+        }
+        .headers{
+            color: rgb(4, 82, 160);
+            background-color: rgb(226, 226, 226);
+            border-bottom: 1px solid rgb(211, 211, 211);
+        }
+        .headers h3{
+            padding: 16px;
+            
+        }
+
+        .last_col_item{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .last_col_item input{
+            color: white;
+            border: none;
+            background-color: rgb(31, 88, 201);
+            border-radius: 5px;
+            padding: 10px 30px;
+        }
+        .last_col_item a{
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .grid  div{
+            
+        }
     </style>
 </head>
+
 <body>
     <header>
-            <h1>Flights - Search List</h1>
-            <p>Home / Flights Search List</p>
+        <h1>Flights - Search List</h1>
+        <p>Home / Flights Search List</p>
     </header>
     <main>
 
         <div class="filters">
-                <div class="filter_radio_buttons">
+            <div class="filter_radio_buttons">
+                <label>
                     <input type="radio" name="ways" id="oneWay">
-                    <label for="oneWay">One Way</label>
+                    <span>One Way</span>
+
+                </label>
+                <label>
                     <input type="radio" name="ways" id="roundTrip">
-                    <label for="roundTrip">Round Trip</label>
-                </div>
-                <div class="search_fields">
-                    <input type="text" name="" id="" placeholder="From">
-                    <input type="text" name="" id="" placeholder="To">
-                    <input type="date" name="" id="" placeholder="Depart Date">
-                    <input type="date" name="" id="" placeholder="Return Date">
-                    <select name="" id="select_class" >
-                        <option value="Econom">Economy Class</option>
-                        <option value="Average">Average Class</option>
-                        <option value="Lux">Lux Class</option>
-                    </select>
-                    <input type="button" name="" id="search_btn" class="btn" value="Search">
-                </div>
+                    <span>Round Trip</span>
+                </label>
+            </div>
+            <div class="search_fields">
+                <!-- <label> -->
+                <input type="text" name="" id="" placeholder="From" class="location">
+                <!-- <img src="images/place.png" alt="" width="10"> -->
+                <!-- </label> -->
+                <input type="text" name="" id="" placeholder="To" class="location">
+                <input type="date" name="" id="" placeholder="Depart Date">
+                <input type="date" name="" id="" placeholder="Return Date">
+                <select name="" id="select_class">
+                    <option value="Econom">Economy Class</option>
+                    <option value="Average">Average Class</option>
+                    <option value="Lux">Lux Class</option>
+                </select>
+                <input type="button" name="" id="search_btn" class="btn" value="Search">
+            </div>
         </div>
         <div class="main">
             <div class="filter">
@@ -227,21 +343,163 @@
                 </div>
             </div>
             <div class="races">
-                <div>
+                <div class="dehli">
                     <h2>Dehli to Sydney</h2>
                 </div>
+                <div class="headers grid">
+                    <h3>Airlines</h3>
+                    <h3>Departure</h3>
+                    <h3>Duration</h3>
+                    <h3>Arrival</h3>
+                    <h3>Price</h3>
+                </div>
                 <div class="grid">
+                    
+
                     <div>
-                        <span>Airlines</span>
-                        <span>Departure</span>
-                        <span>Duration</span>
-                        <span>Arrival</span>
-                        <span>Price</span>
-                        <span></span>
+                        <h3>IndiGo</h3>
+                        <p>6E-2489</p>
+                    </div>
+                    <div>
+                        <h3>23:30</h3>
+                        <p>Dehli</p>
+                    </div>
+                    <div>
+                        <h3>18h 55m</h3>
+                        <p>Non Stop</p>
+                    </div>
+                    <div>
+                        <h3>18:15</h3>
+                        <p>Sydney</p>
+                    </div>
+                    <h3>$980</h3>
+                    <div class="last_col_item">
+                        <input type="button" value="Book">
+                        <a href="#">Flight Details</a>
+                    </div>
+
+                    <div>
+                        <h3>IndiGo</h3>
+                        <p>6E-2489</p>
+                    </div>
+                    <div>
+                        <h3>23:30</h3>
+                        <p>Dehli</p>
+                    </div>
+                    <div>
+                        <h3>18h 55m</h3>
+                        <p>Non Stop</p>
+                    </div>
+                    <div>
+                        <h3>18:15</h3>
+                        <p>Sydney</p>
+                    </div>
+                    <div>
+                        <h3>$980</h3>
+                    </div>
+                    <div class="last_col_item">
+                        <input type="button" value="Book">
+                        <a href="#">Flight Details</a>
+                    </div>
+
+                    <div>
+                        <h3>IndiGo</h3>
+                        <p>6E-2489</p>
+                    </div>
+                    <div>
+                        <h3>23:30</h3>
+                        <p>Dehli</p>
+                    </div>
+                    <div>
+                        <h3>18h 55m</h3>
+                        <p>Non Stop</p>
+                    </div>
+                    <div>
+                        <h3>18:15</h3>
+                        <p>Sydney</p>
+                    </div>
+                    <div>
+                        <h3>$980</h3>
+                    </div>
+                    <div class="last_col_item">
+                        <input type="button" value="Book">
+                        <a href="#">Flight Details</a>
+                    </div>
+
+                    <div>
+                        <h3>IndiGo</h3>
+                        <p>6E-2489</p>
+                    </div>
+                    <div>
+                        <h3>23:30</h3>
+                        <p>Dehli</p>
+                    </div>
+                    <div>
+                        <h3>18h 55m</h3>
+                        <p>Non Stop</p>
+                    </div>
+                    <div>
+                        <h3>18:15</h3>
+                        <p>Sydney</p>
+                    </div>
+                    <div>
+                        <h3>$980</h3>
+                    </div>
+                    <div class="last_col_item">
+                        <input type="button" value="Book">
+                        <a href="#">Flight Details</a>
+                    </div>
+
+                    <div>
+                        <h3>IndiGo</h3>
+                        <p>6E-2489</p>
+                    </div>
+                    <div>
+                        <h3>23:30</h3>
+                        <p>Dehli</p>
+                    </div>
+                    <div>
+                        <h3>18h 55m</h3>
+                        <p>Non Stop</p>
+                    </div>
+                    <div>
+                        <h3>18:15</h3>
+                        <p>Sydney</p>
+                    </div>
+                    <div>
+                        <h3>$980</h3>
+                    </div>
+                    <div class="last_col_item">
+                        <input type="button" value="Book">
+                        <a href="#">Flight Details</a>
+                    </div>
+
+                    <div>
+                        <h3>IndiGo</h3>
+                        <p>6E-2489</p>
+                    </div>
+                    <div>
+                        <h3>23:30</h3>
+                        <p>Dehli</p>
+                    </div>
+                    <div>
+                        <h3>18h 55m</h3>
+                        <p>Non Stop</p>
+                    </div>
+                    <div>
+                        <h3>18:15</h3>
+                        <p>Sydney</p>
+                    </div>
+                    <div>
+                        <h3>$980</h3>
+                    </div>
+                    <div class="last_col_item">
+                        <input type="button" value="Book">
+                        <a href="#">Flight Details</a>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
 </body>
+
 </html>
